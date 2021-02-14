@@ -23,6 +23,8 @@
 <h3> BMI Range Between 19 to 25</h3><br/>
 <input type='number' class= "w-45 m-auto" id= 'weight' placeholder= "Enter Weight in Kg" required ="required" /><br/><br/>
 <input type='number' class= "w-45 m-auto" id= 'height' placeholder= "Enter Height in Ft." required ="required" /><br/><br/>
+<input type='number' class= "w-45 m-auto" id= 'height' placeholder= "Enter Weight in Inch" required ="required" /><br/><br/>
+
 <p>
 <button onclick='bmi()' type='submit' class="btn btn-success" >CHECK BMI</button>
 </p>
@@ -33,7 +35,9 @@
    function bmi(){
    var weight = document.getElementById('weight').value;
    var height= document.getElementById('height').value;
-   height = height * 12;
+   Let metre = feet + inch;
+height = metre/3.2808;
+height = height * 12;
    height = height * 0.025;
    
    var bmiresult = weight/(height * height);
